@@ -3447,6 +3447,9 @@ fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking libraries..." >&5
 $as_echo "$as_me: checking libraries..." >&6;}
 
+LDFLAGS="`mysql_config --libs`"
+CPPFLAGS="$CFLAGS `mysql_config --include`"
+
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for MySQL library..." >&5
 $as_echo "$as_me: checking for MySQL library..." >&6;}
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for mysql_real_connect in -lmysqlclient" >&5
